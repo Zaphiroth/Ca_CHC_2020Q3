@@ -60,7 +60,7 @@ proj.adj <- proj.price %>%
          Prod_Desc_EN = prod_en, Prod_Desc_CN = prod_cn, Pck_Desc, Corp_Desc, 
          Sales = sales, Units = units, DosageUnits = dosage_units)
 
-write.xlsx(proj.adj, '03_Outputs/05_WYETH_Ca_Summary.xlsx')
+write.xlsx(proj.adj, '03_Outputs/05_WYETH_Ca_2020Q3.xlsx')
 
 
 ##---- result ----
