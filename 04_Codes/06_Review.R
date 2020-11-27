@@ -47,7 +47,7 @@ write.xlsx(price.check, '05_Internal_Review/Price_Check.xlsx')
 
 
 ##---- Check SOP -----
-# CHPA
+## CHPA
 chpa.format <- read.xlsx('05_Internal_Review/ims_chpa_to20Q3_format.xlsx')
 
 ca.chpa <- chpa.format %>% 
@@ -69,7 +69,7 @@ ca.chpa <- chpa.format %>%
 
 write.xlsx(ca.chpa, '05_Internal_Review/Ca_CHPA_2018Q1_2020Q3.xlsx')
 
-# Update
+## Update
 chpa.info <- ca.chpa %>% 
   distinct(Pack_ID, ATC3, Molecule_Desc, Prod_Desc_EN, Pck_Desc, Corp_Desc)
 
@@ -79,6 +79,6 @@ delivery.update <- wyeth.delivery %>%
   left_join(chpa.info, by = 'Pack_ID') %>% 
   filter(!is.na(ATC3))
 
-write.xlsx(delivery.update, '05_Internal_Review/delivery_updated.xlsx')
+write.xlsx(delivery.update, '05_Internal_Review/Delivery_Updated.xlsx')
 
 
